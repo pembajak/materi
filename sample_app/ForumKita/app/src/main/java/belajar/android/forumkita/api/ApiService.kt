@@ -20,7 +20,7 @@ class ApiService {
 
         var gson = provideGson()
         var okHttpClient = provideOkHttpClient(provideHttpLoggingInterceptor())
-        var retrofit = provideRetrofit("http://my-json-server.typicode.com/",gson,okHttpClient)
+        var retrofit = provideRetrofit("https://raw.githubusercontent.com/",gson,okHttpClient)
 
         apiRepository = provideApiService(retrofit)
     }

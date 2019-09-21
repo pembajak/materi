@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() , MainContract.View{
         presenter.attach(this)
 
 
-        // OnClickListener
+
         var onItemClick : RVListener<Post> = object: RVListener<Post> {
             override fun onClick(item: Post) {
                 val intent = Intent(this@MainActivity, DetailActivity::class.java)
