@@ -2,8 +2,9 @@ package belajar.android.forumkita.detail
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import belajar.android.forumkita.Post
 import belajar.android.forumkita.R
-import belajar.android.forumkita.model.Post
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_detail.*
 import kotlinx.android.synthetic.main.item_artikel.view.*
@@ -40,6 +41,21 @@ class DetailActivity : AppCompatActivity() {
 
 
 
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d("DetailActivity" , ">>> DetailActivity onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("DetailActivity" , ">>> DetailActivity onResume")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("DetailActivity" , ">>> DetailActivity onDestroy")
     }
 
     fun dateFormatter(date: Date, formatType: String): String {

@@ -7,8 +7,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    
-    
+
     <ImageView
             android:scaleType="centerCrop"
             android:layout_weight="0.4"
@@ -16,7 +15,6 @@
             android:src="#c0c0c0c0"
             android:layout_width="0dp"
             android:layout_height="95dp"/>
-
 
     <LinearLayout
             android:padding="16dp"
@@ -29,7 +27,7 @@
                 android:maxLines="2"
                 android:textSize="16dp"
                 android:textStyle="bold"
-                android:textColor="#000000"
+                android:textColor="@color/hitam"
                 android:text="Judul Game Yang Mirip GTA Untuk Android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:id="@+id/tvJudul"/>
@@ -45,7 +43,7 @@
                     android:layout_marginTop="5dp"
                     android:textSize="14dp"
                     android:textStyle="bold"
-                    android:textColor="#2383F3"
+                    android:textColor="@color/biru"
                     android:text="GAMES"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"/>
@@ -64,9 +62,6 @@
                     android:layout_height="wrap_content"/>
 
         </LinearLayout>
-
-
-
 
     </LinearLayout>
 

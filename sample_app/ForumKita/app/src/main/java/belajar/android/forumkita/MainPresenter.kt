@@ -8,11 +8,9 @@ import io.reactivex.schedulers.Schedulers
 
 class MainPresenter : MainContract.Presenter {
 
-    var view : MainContract.View? = null
-    var apiService : ApiService
-
-    val compositeDisposable = CompositeDisposable()
-
+    private var view : MainContract.View? = null
+    private var apiService : ApiService
+    private  val compositeDisposable = CompositeDisposable()
 
     init {
         apiService = ApiService()
@@ -23,27 +21,26 @@ class MainPresenter : MainContract.Presenter {
     }
 
     override fun getListArtikel() {
-
-       Log.d("forum","getListArtikel()")
-       var sub =  apiService.apiRepository.getArtikel()
-           .subscribeOn(Schedulers.io())
-           .observeOn(AndroidSchedulers.mainThread())
-           .subscribe(
-               {
-                   artikelRespon ->
-                   Log.d("forum","getListArtikel()")
-                   view?.let {
-                       it.onSuccess(artikelRespon)
-                   }
-               },
-               {
-                   Log.d("forum",it.message)
-                   view?.let {
-                       it.onError(it.toString())
-                   }
-               }
-           )
-
+        Log.d("forum","getListArtikel()")
+        var sub =  apiService.apiRepository.getArtikel()
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe(
+                {
+                        artikelRespon ->
+                    Log.d("forum","getListArtikel()")
+                    view?.let {
+                        it.onSuccess(artikelRespon)
+                    }
+                },
+                {
+                    error ->
+                    Log.d("forum",error.message)
+                    view?.let {
+                        it.onError(error.message!!)
+                    }
+                }
+            )
         compositeDisposable.add(sub)
     }
 }

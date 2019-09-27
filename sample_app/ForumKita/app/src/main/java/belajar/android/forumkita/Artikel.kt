@@ -1,5 +1,4 @@
-package belajar.android.forumkita.model
-
+package belajar.android.forumkita
 import android.os.Parcel
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
@@ -8,25 +7,7 @@ import com.google.gson.annotations.SerializedName
 data class ArtikelRespon(
     @SerializedName("posts")
     val posts: List<Post>
-) : Parcelable {
-    constructor(source: Parcel) : this(
-        source.createTypedArrayList(Post.CREATOR)
-    )
-
-    override fun describeContents() = 0
-
-    override fun writeToParcel(dest: Parcel, flags: Int) = with(dest) {
-        writeTypedList(posts)
-    }
-
-    companion object {
-        @JvmField
-        val CREATOR: Parcelable.Creator<ArtikelRespon> = object : Parcelable.Creator<ArtikelRespon> {
-            override fun createFromParcel(source: Parcel): ArtikelRespon = ArtikelRespon(source)
-            override fun newArray(size: Int): Array<ArtikelRespon?> = arrayOfNulls(size)
-        }
-    }
-}
+)
 
 data class Post(
     @SerializedName("berita")

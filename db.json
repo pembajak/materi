@@ -43,10 +43,34 @@
         },
         "id": 1,
         "tanggal": 1568891561394,
+        "img":"https://gamebrott.com/wp-content/uploads/2019/09/bukalapak-696x522-e1568879177144.jpg",
+        "kategori" : "TECH",
+        "judul": "Hilang dari Google Play Store, Inilah penjelasan dari Bukalapak!",
+        "berita": "Pengguna dikejutkan karena applikasi ecommerce Bukalapak dikabarkan hilang di Google Play Store sejak hari Rabu malam. Dimana pengguna yang ingin mengunduh applikasi tersebut tidak dapat mencarinya di Google Play store tersebut. Hal ini memunculkan segala persepsi dari para penggunanya, apakah applikasi ecommerce tersebut sebenarnya aman untuk digunakan."
+      },
+      {
+        "penulis" : {
+            "nama" : "Harun",
+            "pic" : "https://github.com/pembajak/materi/blob/master/young.jpg?raw=true"
+        },
+        "id": 1,
+        "tanggal": 1568891561394,
         "img":"https://gamebrott.com/wp-content/uploads/2019/09/nonojok.jpg",
         "kategori" : "GAMES",
         "judul": "Monster Rancher Bakal Rilis Untuk Platform Ios/Android dan Switch",
         "berita": "Setelah 2 bulan yang lalu Koei Tecmo memberikan teaser tentang game Monster Rancher yang bakal dirilis kembali memalui twitter. Kali ini Koei Tecmo pamerkan trailer terbaru Monster Rancher mereka. Melalui trailer tersebut mereka membocorkan bahwa game Monster Rancher ini akan rilis di platform Android/IOs dan Switch tahun 2019 ini."
+      },
+      {
+        "penulis" : {
+            "nama" : "Harun",
+            "pic" : "https://github.com/pembajak/materi/blob/master/young.jpg?raw=true"
+        },
+        "id": 1,
+        "tanggal": 1568891561394,
+        "img":"https://gamebrott.com/wp-content/uploads/2019/09/ai-anal.jpg",
+        "kategori" : "GAMES",
+        "judul": "AI Mencoba Menebak Sifat dari Berbagai Karakter Game, Beri Hasil yang Tak Terduga",
+        "berita": "Apa jadinya ketika algoritma suatu program mencoba membaca sifatmu, atau lebih tepatnya foto wajah yang kamu upload ke database mereka? Hasilnya mungkin tidak selalu akurat tetapi tetap menakjubkan untuk disaksikan. Bagaimana apabila tes serupa diberlakukan kepada wajah-wajah karakter video game? Dilansir dari artikel VG247 serta beberapa hasil iseng sendiri, pertanyaan tersebut terjawabkan dengan hasil yang tergolong menarik."
       },
       {
         "penulis" : {

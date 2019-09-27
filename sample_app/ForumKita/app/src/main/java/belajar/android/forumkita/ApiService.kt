@@ -1,9 +1,7 @@
 package belajar.android.forumkita.api
 
-import android.util.Log
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -15,38 +13,31 @@ class ApiService {
 
     var apiRepository : ApiRepository
 
-
     init {
 
         var gson = provideGson()
-        var okHttpClient = provideOkHttpClient(provideHttpLoggingInterceptor())
+        var okHttpClient = provideOkHttpClient()
         var retrofit = provideRetrofit("https://raw.githubusercontent.com/",gson,okHttpClient)
 
         apiRepository = provideApiService(retrofit)
     }
 
-    internal fun provideHttpLoggingInterceptor(): HttpLoggingInterceptor {
-        val logging = HttpLoggingInterceptor()
-        logging.level = HttpLoggingInterceptor.Level.BODY
-        return logging
-    }
-
     /**
-     * fungsi untuk membuat GSON
+     * fungsi untuk Parsing json
      */
-    internal fun provideGson(): Gson {
+    fun provideGson(): Gson {
         val gsonBuilder = GsonBuilder()
         return gsonBuilder.create()
     }
 
     /**
-     * fungsi ApiRepository
+     * Membuat Retrofit
      */
-    internal fun provideApiService(retrofit: Retrofit): ApiRepository {
+    fun provideApiService(retrofit: Retrofit): ApiRepository {
         return retrofit.create(ApiRepository::class.java)
     }
 
-    internal fun provideRetrofit(baseUrl: String, gson: Gson, okHttpClient: OkHttpClient): Retrofit {
+    fun provideRetrofit(baseUrl: String, gson: Gson, okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create(gson))
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
@@ -59,14 +50,12 @@ class ApiService {
     /**
      * fungsi provideOkHttpClient
      */
-    internal fun provideOkHttpClient(loggingInterceptor: HttpLoggingInterceptor
-    ): OkHttpClient {
+    fun provideOkHttpClient(): OkHttpClient {
         val httpClient = OkHttpClient.Builder()
 
         httpClient.writeTimeout(30000, TimeUnit.SECONDS)
         httpClient.readTimeout(30000, TimeUnit.SECONDS)
         httpClient.connectTimeout(30000, TimeUnit.SECONDS)
-        httpClient.addNetworkInterceptor(loggingInterceptor)
 
         return httpClient.build()
     }

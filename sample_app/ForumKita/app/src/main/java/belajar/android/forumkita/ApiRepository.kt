@@ -1,6 +1,6 @@
 package belajar.android.forumkita.api
 
-import belajar.android.forumkita.model.ArtikelRespon
+import belajar.android.forumkita.ArtikelRespon
 import io.reactivex.Observable
 import retrofit2.http.GET
 

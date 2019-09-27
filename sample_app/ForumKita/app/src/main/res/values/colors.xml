@@ -3,4 +3,12 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#009EFA</color>
     <color name="colorAccent">#D81B60</color>
+
+    <!--Base Color for Forum kita -->
+
+    <color name="hitam">#000000</color>
+    <color name="orange">#F69809</color>
+    <color name="putih">#FFFFFF</color>
+    <color name="biru">#2383F3</color>
+
 </resources>
