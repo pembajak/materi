@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() , MainContract.View{
 
 
         var adapter = MainAdapter(artikelRespon.posts)
-        adapter.listener = onItemClick
+        adapter.listener =  onItemClick
 
 
         recycleView.adapter = adapter

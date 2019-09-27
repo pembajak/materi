@@ -10,6 +10,9 @@ import java.util.*
 
 class MainAdapter(private val list: List<Post>) :  RecyclerView.Adapter<MainAdapter.ViewHolder>()  {
 
+    var listener: RVListener<Post>? = null
+
+
     override fun getItemCount(): Int {
         return list.size
     }
@@ -41,6 +44,11 @@ class MainAdapter(private val list: List<Post>) :  RecyclerView.Adapter<MainAdap
                 .load(item.img)
                 .into(itemView.image)
 
+            itemView.setOnClickListener {
+                listener?.let {
+                    it.onClick(item)
+                }
+            }
 
 
         }
